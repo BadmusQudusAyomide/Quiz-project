@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color:lightgreen;">
+   <style>
+    .container1 {
+    max-width: 600px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+  }
+  .container1:hover{color:white;}
+ 
+  .container2{
+    max-width: 600px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 50px;
+  }
+  .container2:hover{color: white;}
+  .container3{
+    max-width: 600px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 50px;
+  }
+  .container3:hover{color: white;}
+   </style> 
+   <div class="container1">
+    <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">WELCOME TO CVE QUIZ</h2>
+   </div>
+   <div class="container2">
+    <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">RANDOM CVE QUIZ</h2>
+   </div>
+   <div class="container3">
+    <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">TOPIC BY TOPIC QUIZ</h2>
+    <form style="align-self: center;">
+        <select id="myDropdown" onchange="goToPage()">
+          <option value="">SELECT A TOPIC</option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+          <option value=".html"></option>
+        </select>
+      </form>
+      
+      <script>
+        function goToPage() {
+          var selectedPage = document.getElementById('myDropdown').value;
+          if(selectedPage) {
+            window.location.href = selectedPage;
+          }
+        }
+      </script>
+   </div>
+</body>
+</html>

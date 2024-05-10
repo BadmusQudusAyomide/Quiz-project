@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Quiz Dashboard</title>
+<style>
+   *{
+     margin:0;
+   }
+  body { font-family: Arial, sans-serif; }
+  .dashboard { display:-webkit-flex; justify-content: space-around; padding: 20px; border-radius: 15px;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+  .dashboard2{display:-webkit-flex; justify-content: space-around; padding: 20px; border-radius: 15px;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  .dashboard div { width: 30%; text-align: center; }
+  .dashboard2 div{width: 30%; text-align: center;}
+  .dashboard .results { 
+    max-width: 300px;
+    height: 130px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 30px;
+  }
+  .dashboard .manage {
+    max-width: 300px;
+    height: 130px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 30px;
+    }
+  .Quiz{
+    max-width: 300px;
+    height: 130px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 30px;
+  }
+  .FAQ{
+    max-width: 300px;
+    height:130px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 30px;
+  }
+  .learnmore{
+    max-width: 300px;
+    height: 130px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 30px;
+  }
+ .Technical{
+  max-width: 300px;
+  height: 130px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 30px;
+ }
+  .container{
+    max-width: 1800px;
+    margin: 0 auto;
+    min-width: fit-content;
+  }
+  .header {
+    background-color: rgb(29, 223, 29);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .FAQ:hover{
+    transform: scale(1.3);
+	transition: .5s ease;
+  }
+  .results:hover{
+    transform: scale(1.3);
+	transition: .5s ease;
+  }
+  .Technical:hover{
+    transform: scale(1.3);
+	transition: .5s ease;
+  }
+  .Quiz:hover{
+    transform: scale(1.3);
+	transition: .5s ease;
+  }
+  .manage:hover{
+    transform: scale(1.3);
+	transition: .5s ease;
+  }
+  .learnmore:hover{
+    transform: scale(1.3);
+	transition: .5s ease;
+  }
+  .header:hover{color: #000;}
+  .button{border-color: lawngreen;}
+  .FAQ:hover{color:white}
+  .manage:hover{color:white}
+  .learnmore:hover{color:white}
+  .Quiz:hover{color:white}
+  .results:hover{color: white;}
+  .Technical:hover{color:white;}
+  .footer-text{
+            color: white;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-style: oblique;
+        }
+        .footer-text:hover{
+            color:lightcoral
+        }
+        .footer{
+            background-color: rgb(29, 223, 29);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 140px;
+        }
+        .footer p{
+            font-size: 20px;
+            text-decoration: solid;
+            font-family: cursive;
+        }
+        .Quiz-content {
+         position: absolute;
+         display:none;
+         width:20%;
+         box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);}
+         .Quiz:hover > .Quize-content {
+         display: block;
+      }
+      .Quiz-content > a {
+         display: block;
+         padding: 12px;
+         text-decoration: none;
+         color: black;
+      }
+      .Quiz-content > a:hover {
+         color: white;
+         background:blue;}
+         .social-media
+{
+	margin: 30px auto;
+	text-align: center;
+}
+.social-media
+{
+	width: 10%;
+	margin: 0 7px;
+	cursor: pointer;
+	opacity: 0.85;
+  height: 5%;
+}
+.footer-body{
+  background-color: green;
+
+}
+.right-col{
+  background-color:green;
+  align-self: center;
+  align-content:center ;
+}
+nav ul, .srch, .get-started{
+		display: none;}
+
+    footer .total_que span{
+    display: flex;
+    user-select: none;
+}
+
+.footer-body{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.footer-body{
+    padding-left: 0px;
+}
+
+footer button{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+footer button:hover{
+    background: #0263ca;
+}
+
+footer button.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.footer-container {
+		max-width: 600px;
+	}
+	.right-col {
+		width: 100%;
+		margin-bottom: 60px;
+	}
+	.left-col {
+		width: 100%;
+		text-align: center;
+	}
+	.social-media {
+		display:-webkit-inline-flex;
+		justify-content: center;
+	}
+	.logo {
+		transition: 1s;
+		margin-left: 30%;
+	}
+	nav ul, .srch, .get-started{
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+	nav {
+		padding-bottom: 20px;
+		border-bottom: 1px solid #0005;
+		/* position: fixed; */
+		/* top: 0; */
+	}
+	.quote p, .quote h5, .play {
+		justify-content: center;
+		text-align: center;
+	}
+	.quote p {
+		font-size: 30px;
+	}
+	.service-container .right-side img {
+		width: 90%;
+	}
+	.title {
+		margin-top: 0px;
+	}
+	
+
+footer .btn{
+		margin: 0;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.svg-image img {
+		width: 90%;
+		margin: 20px;
+		/* align-self: center; */
+	}
+
+  .feedbox form input, .feedbox form .fname{
+		width: 100%;
+	}
+  footer .newsletter-form {
+	display:flow-root;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+footer input::placeholder {
+  color: white !important;
+}
+
+footer .txtb {
+	flex: 1;
+	padding: 18px 40px;
+	font-size: 16px;
+	background: #343A40;
+	border: none;
+	font-weight: 700;
+	outline: none;
+	border-radius: 5px;
+	min-width: 260px;
+	margin-top: 20px;
+	color: white;
+}
+footer .btn {
+	margin-top: 20px;
+	padding: 18px 40px;
+	font-size: 16px;
+	color: #f1f1f1;
+	background-color:lightgreen;
+	border: none;
+	font-weight: 700;
+	outline: none;
+	border-radius: 5px;
+	margin-left: 20px;
+	cursor: pointer;
+	transition: opacity .3s linear;	
+  width: 25%;
+}
+footer .btn:hover {
+	opacity: .7;
+}
+/*FOOTER*/
+footer {
+	color: #E5E8EF;
+	background: #000D;
+	padding: 50px 0; 
+}
+footer .footer-container {
+	max-width: 1300px;
+	margin: auto;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+footer .social-media img{
+	width: 22px;
+}
+footer .logo {
+	width: 180px;
+	color: #fff;
+}
+footer .social-media a{
+	margin-right: 10px;
+	font-size: 22px;
+	text-decoration: none;
+}
+footer .right-col h1{
+	font-size: 26px;
+}
+footer .border{
+	width: 100px;
+	height: 4px;
+	background-color:greenyellow;
+	margin: 2px;
+}
+/*SCROLLING TEXT*/
+.marqu {
+	text-align: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.feedbox {
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("images/extra/b4.jpg");
+	background-size: cover;
+	padding: 50px 80px;
+	background-attachment: fixed;
+}
+.feed {
+	width: 800px;
+	height: 400px;
+	position: relative;
+	border-radius: 10px;
+	justify-content: center;
+	box-shadow: inset 0 0 90px rgba(0,0,0,0.6),
+					0 0 80px rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.4);
+}
+.feed form {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+.feed form label {
+	position: absolute;
+	color: #f2f2f2;
+	font-size: 10px;
+	font-weight: 800;
+}
+.feed form input, .feed textarea {
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px lightgray;
+	border: 1px solid rgba(0,0,0,0.2);
+	outline: none;
+	color: #2E3D49;
+	background: #fff9;
+	font-weight: 600;
+}
+.feed form input {
+	margin-bottom: 15px;
+	width: 50%;
+}
+.feed form .fname {
+	width: 25%;
+}
+.feed form textarea {
+	width: 100%;
+	height: 100px;
+}
+.feed #csubmit {
+	margin-top: 25px; 
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	border-radius: 5px;
+	border-style: none;
+	outline: none;
+	width: 10%;
+	padding: 15px 25px;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+
+/*PROPERTIES FOR MAKING WEBSITE RESPONSIVE*/
+@media screen and (max-width: 960px) {
+	.footer-container {
+		max-width: 600px;
+	}
+	.right-col {
+		width: 30%;
+		margin-bottom: 60px;
+    height: 50%;
+	}
+
+	.social-media {
+		display: flex;
+		justify-content: center;
+	}
+	.logo {
+		transition: 1s;
+		margin-left: 30%;
+	}
+	nav ul, .srch, .get-started{
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+	nav {
+		padding-bottom: 20px;
+		border-bottom: 1px solid #0005;
+		/* position: fixed; */
+		/* top: 0; */
+	}
+	.quote p, .quote h5, .play {
+		justify-content: center;
+		text-align: center;
+	}
+	.quote p {
+		font-size: 30px;
+	}
+	.service-container .right-side img {
+		width: 90%;
+	}
+	.title {
+		margin-top: 0px;
+	}
+	
+}
+@media screen and (max-width: 700px) {
+	footer .btn{
+		margin: 0;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.svg-image img {
+		width: 90%;
+		margin: 20px;
+		/* align-self: center; */
+	}
+}
+
+@media screen and (max-width: 1000px) {	
+	.feedbox form input, .feedbox form .fname{
+		width: 100%;
+	}
+}
+.sam{
+  display:flexbox;
+}
+.aim{
+  text-decoration:dotted;
+  font-family:sans-serif;
+}
+</style>
+</head>
+<body style="background-color:lightgreen;">
+  <script>
+    function showDialog(){
+      alert("welcome to learn-ed quiz website")
+    }
+  </script>
+    <div class="container">
+        <div class="header">
+            <h1 style="font-family:sans-serif;text-align: left;">LEARN-ED</h1>
+        </div>
+        <div class="button">
+            <button style=" opacity: 100% ;">view profile</button>
+        </div>
+        <div class="aim">
+          <h3><a href="our aim.html">OUR AIM
+          </a>
+        </h3>
+        </div>
+    </div>
+  <h1>Welcome to the Quiz Dashboard!</h1>
+  <div class="dashboard">
+    <div class="results">
+      <h2>Quiz Results</h2>
+      <!-- Results will be displayed here -->
+    </div>
+    <div class="manage">
+      <h2>Manage Quizzes</h2>
+      <!-- Management options will be displayed here -->
+    </div>
+    <div class="Quiz">
+       <h2>Take Quiz</h2>
+       <form>
+        <select id="myDropdown" onchange="goToPage()">
+          <option value="">Select a page</option>
+          <option value="mth.html">MATHEMATICS 1O2</option>
+          <option value="Physics.html">PHYSICS 102</option>
+          <option value="chemistry project.html">CHEMISTRY 102</option>
+          <option value="biology.html">BIOLOGY 102</option>
+          <option value="software engineering.html">SEN 102[SOFTWARE ENGINEERING]</option>
+          <option value="computer science.html">CSC 112[COMPUTER SCIENCE]</option>
+          <option value="cybersecurity.html">CYB 102[CYBERSECURITY]</option>
+          <option value="info-science.html">INS 102[INFO-SCIENCE]</option>
+          <option value="library and information science.html">LIS 102[LIBRARY AND INFO-SCIENCE]</option>
+          <option value="info-tech.html">INFT 102[INFO-TECH]</option>
+          <option value="use of english.html">GNS 101[USE OF ENGILISH]</option>
+          <option value="use of library.html">GNS 103[USE OF LIBRARY]</option>
+          <option value=".html">GNS 211[BASIC FRENCH]</option>
+          <option value="entrepreneurship.html">GNS 203[ENTREPRENEURSHIP]</option>
+          <option value="statistics.html">STATISTICS</option>
+          <option value="engineering maths.html">MTH 103[ENGINEERING MATHS]</option>
+          <option value="nigerian people and culture.html">[NIGERIAN PEOPLE AND CULTURE]</option>
+          <option value="philosophy.html">[PHILOSOPHY]</option>
+          <option value="MEE.html">[MEE 102]</option>
+          <option value="CVE 102.html">[CVE 102]</option>
+          <option value="microbiology.html">[MICROBIOLOGY]</option>
+          <option value="anatomy.html">[ANATOMY]</option>
+          <option value="public health studies.html">[PUBLIC HEALTH STUDIES]</option>
+        </select>
+      </form>
+      
+      <script>
+        function goToPage() {
+          var selectedPage = document.getElementById('myDropdown').value;
+          if(selectedPage) {
+            window.location.href = selectedPage;
+          }
+        }
+      </script>
+    </div>
+   <!--click here to start a new quiz--> 
+  </div>
+  <div class="dashboard2">
+    <div class="FAQ">
+        <h2>FAQ [frequently asked questions]</h2>
+       </div>
+       <!--show frequently asked questions-->
+       <div class="Technical">
+        <h2>Resolve Technical Issues</h2>
+       </div>
+       <!--if user have any technical issue while using the website the are advised to click here-->
+       <div class="learnmore">
+        <h2>More</h2>
+        <!--if user wants to learn more about the website or access more features-->
+       </div>
+  </div>
+  <script>
+    // JavaScript code to interact with the quiz results and management options
+  </script>
+  <!-- Sliding Information -->
+	<marquee style="background-color:green; margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-body">
+       <div class="footer-container">
+        <div class="left-col">
+          <img src="images/icon/logo - Copy.png" style="width: 200px;">
+          <div class="logo"></div>
+          <div class="social-media">
+            <a href="#"><img src="tiktok.jpg" style="height: 50px;width: 50px;"></a>
+            <a href="#"><img src="facebook.jpg"style="height: 50px;width: 50px;"></a>
+            <a href="#"><img src="instagram.jpg"style="height: 50px;width: 50px;"></a>
+            <a href="#"><img src="twitter.jpg"style="height: 50px;width: 50px;"></a>
+            <a href="#"><img src="whatsapp.jpg"style="height: 50px;width: 50px;"></a>
+          </div><br><br>
+          <div class="sam">
+          <p class="rights-text">Copyright © 2024 Created By OLUWABIYI SAMUEL All Rights Reserved.</p>
+          <br><p><img src="location.png"style="height: 30px;width: 30px;">Osun state oke-baale</p><br>
+          <p><img src="call.png"style="height: 30px;width: 30px;">07044359911 or 08053467687<br><img src="message.png"style="height: 30px;width: 30px;">&nbsp; samueloluwabiyi68@gmail.com</p>
+        </div>
+        <div class="right-col">
+          <h1 style="color: #fff">Our Newsletter</h1>
+          <div class="border"></div><br>
+          <p>Enter Your Email to get our News and updates.</p>
+          <form class="newsletter-form">
+            <input class="txtb" type="email" placeholder="Enter Your Email">
+            <input class="btn" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+</footer>
+</body>
+</html

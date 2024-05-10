@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Quiz</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    font-size: 1.2em;
+  }
+  .options {
+    list-style: none;
+    padding: 0;
+  }
+  .options li {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="quiz"></div>
+  <button id="submit">Submit Answer</button>
+  <div id="results"></div>
+</div>
+
+<script>
+const quizQuestions = [
+  {
+    question: "What is the force on an object with a mass of 5 kg and an acceleration of 2 m/s²?",
+    answers: {
+      a: '10 N',
+      b: '7 N',
+      c: '25 N',
+      d: 'None of the above'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "A 10 kg object experiences a 50 N force. What is its acceleration?",
+    answers: {
+      a: '5 m/s²',
+      b: '500 m/s²',
+      c: '0.2 m/s²',
+      d: 'None of the above'
+    },
+    correctAnswer: 'a'
+  },
+  // Add more questions as needed
+];
+
+function buildQuiz() {
+  const output = [];
+
+  quizQuestions.forEach((currentQuestion, questionNumber) => {
+    const answers = [];
+    for(letter in currentQuestion.answers){
+      answers.push(
+        `<label>
+          <input type="radio" name="question${questionNumber}" value="${letter}">
+          ${letter} :
+          ${currentQuestion.answers[letter]}
+        </label>`
+      );
+    }
+
+    output.push(
+      `<div class="question"> ${currentQuestion.question} </div>
+      <ul class="options"> ${answers.join('')} </ul>`
+    );
+  });
+
+  quizContainer.innerHTML = output.join('');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color:lightgreen;">
+   <style>
+    .container1 {
+    max-width: 600px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+  }
+  .container1:hover{color:white;}
+ 
+  .container2{
+    max-width: 600px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 50px;
+  }
+  .container2:hover{color: white;}
+  .container3{
+    max-width: 600px;
+    margin: auto;
+    background:lawngreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    margin-top: 50px;
+  }
+  .container3:hover{color: white;}
+   </style> 
+   <div class="container1">
+    <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">WELCOME TO CHEMISTRY QUIZ</h2>
+   </div>
+   <div class="container2">
+    <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">RANDOM CHEMISTRY QUIZ</h2>
+   </div>
+   <div class="container3">
+    <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">TOPIC BY TOPIC QUIZ</h2>
+    <form style="align-self: center;">
+        <select id="myDropdown" onchange="goToPage()">
+          <option value="">SELECT A TOPIC</option>
+          <option value=".html">QUANTITATIVE ANALYSIS OF ORGANIC CHEMISTRY</option>
+          <option value=".html">ISOLATION AND PURIFICATION OF ORGANIC COMPOUND</option>
+          <option value=".html">ORGANIC CHEMISTRY [SOURCES,FORMULA OF ORGANIC COMPOUND]</option>
+          <option value=".html">TYPES OF ORGANIC REACTION</option>
+          <option value="isomerism.html">ISOMERISM</option>
+          <option value=".html">CHEMICAL BONDING</option>
+          <option value=".html">AROMATIC CHEMISTRY</option>
+          <option value=".html">FUNCTIONAL GROUP AND HOMOLOGOUS SERIES</option>
+          <option value=".html">ALKANES</option>
+          <option value=".html">ATOMIC STRUCTURE</option>
+          <option value=".html">POLYMERIZATION</option>
+          <option value=".html">MACRO MOLECULES</option>
+          <option value=".html">CHEMISTRY OF ALCOHOL</option>
+          <option value=".html">CHEMISTRY OF HYDROCARBON</option>
+          <option value=".html">CHEMISTRY OF CARBONYL COMPOUNDS[ALDEHYDE AND KETONES]</option>
+          <option value=".html">CHEMISTRY OF CARBOXYLIC ACID</option>
+          <option value=".html">NAMING OF ORGANIC COMPOUND</option>
+          <option value=".html">PREDICTION OF SHAPE OF COVALENT COMPOUNDS,HYBRIDIZATION</option>
+          <option value="acidity and basicity of organic compound.html">ACIDITY AND BASICITY OF ORGANIC COMPOUND</option>
+        </select>
+      </form>
+      
+      <script>
+        function goToPage() {
+          var selectedPage = document.getElementById('myDropdown').value;
+          if(selectedPage) {
+            window.location.href = selectedPage;
+          }
+        }
+      </script>
+   </div>
+</body>
+</html>

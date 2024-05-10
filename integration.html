@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Integration Quiz</h2>
+
+<form action="/submit_quiz">
+  <h3>1. What is the integral of $$f(x) = x^2$$?</h3>
+  <input type="radio" id="q1a" name="q1" value="x^3/3 + C">
+  <label for="q1a">$$\frac{x^3}{3} + C$$</label><br>
+  <input type="radio" id="q1b" name="q1" value="x^3 + C">
+  <label for="q1b">$$x^3 + C$$</label><br>
+  <input type="radio" id="q1c" name="q1" value="x^2/2 + C">
+  <label for="q1c">$$\frac{x^2}{2} + C$$</label><br>
+
+  <h3>2. The integral $$\int \cos(x) dx$$ equals to:</h3>
+  <input type="radio" id="q2a" name="q2" value="sin(x) + C">
+  <label for="q2a">$$\sin(x) + C$$</label><br>
+  <input type="radio" id="q2b" name="q2" value="-sin(x) + C">
+  <label for="q2b">$$-\sin(x) + C$$</label><br>
+  <input type="radio" id="q2c" name="q2" value="cos(x) + C">
+  <label for="q2c">$$\cos(x) + C$$</label><br>
+
+  <h3>3. The integral of a constant 'c' is:</h3>
+  <input type="radio" id="q3a" name="q3" value="c">
+  <label for="q3a">$$c$$</label><br>
+  <input type="radio" id="q3b" name="q3" value="cx">
+  <label for="q3b">$$cx$$</label><br>
+  <input type="radio" id="q3c" name="q3" value="cx + C">
+  <label for="q3c">$$cx + C$$</label><br>
+
+  <h3>4. The area under the curve $$y = x^2$$ from x=0 to x=2 is:</h3>
+  <input type="radio" id="q4a" name="q4" value="8/3">
+  <label for="q4a">$$\frac{8}{3}$$</label><br>
+  <input type="radio" id="q4b" name="q4" value="4">
+  <label for="q4b">$$4$$</label><br>
+  <input type="radio" id="q4c" name="q4" value="2">
+  <label for="q4c">$$2$$</label><br>
+
+  <h3>5. The integral $$\int e^x dx$$ equals to:</h3>
+  <input type="radio" id="q5a" name="q5" value="e^x + C">
+  <label for="q5a">$$e^x + C$$</label><br>
+  <input type="radio" id="q5b" name="q5" value="e^x">
+  <label for="q5b">$$e^x$$</label><br>
+  <input type="radio" id="q5c" name="q5" value="x e^x + C">
+  <label for="q5c">$$x e^x + C$$</label><br>
+
+  <!-- Add more questions in the same format -->
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

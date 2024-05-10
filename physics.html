@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url(physics.jpg)">
+    <style>
+        .container1{
+          width: 50%; /* Set the width of the container */
+          margin: auto; /* Center the container */
+          padding: 20px; /* Add some padding */
+          background-color:lawngreen; /* Set a background color */
+          border: 1px solid #dee2e6; /* Add a border */
+          border-radius: 10px; /* Add rounded corners */
+          box-shadow: 10px;
+          margin-top: 70px;
+          margin-bottom: 20px;
+        }
+        .container2{
+          width: 50%; /* Set the width of the container */
+          margin: auto; /* Center the container */
+          padding: 20px; /* Add some padding */
+          background-color:lawngreen; /* Set a background color */
+          border: 1px solid #dee2e6; /* Add a border */
+          border-radius: 10px; /* Add rounded corners */
+          box-shadow: 10px;
+          /* margin-top/: 20px; */
+          margin-bottom: 20px;
+        }
+        .container3{
+          width: 50%; /* Set the width of the container */
+          margin: auto; /* Center the container */
+          padding: 20px; /* Add some padding */
+          background-color:lawngreen; /* Set a background color *
+          border: 1px solid #dee2e6; /* Add a border */
+          border-radius: 10px; /* Add rounded corners */
+          box-shadow: 10px;
+          /* margin-top: 20px; */
+        }
+        </style>
+        <div class="container1">
+          <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;">PHYSICS 102 QUIZ</h2>
+          <!-- Your content goes here -->
+        </div>
+        <div class="container2">
+          <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;">RANDOM QUIZ</h2>
+          <!-- Your content goes here -->
+        </div>
+        <div class="container3">
+            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;">TOPIC BY TOPIC QUIZ</h2>
+            <form>
+                <select id="myDropdown" onchange="goToPage()">
+                  <option value="">Select a page</option>
+                  <option value=".\charge\index.html">ELECTRICITY</option>
+                  <option value="quiz dashboard.html">CHARGE</option>
+                  <option value="field.html">FIELD[ELECTRIC FIELD,GRAVITATIONAL FIELD,MAGNETIC FIELD]</option>
+                  <option value="RADIOACTIVITY.html">RADIOACTIVITY</option>
+                  <option value="Wave\index.html">WAVE-PARTICLE DUALITY</option>
+                  <option value="photo-electricity\index.html">PHOTOELECTRICITY</option>
+                  <option value="wave.html">WAVE</option>
+                  <option value="optics.html">OPTICS[LENS,MIRRORS]</option>
+                </select>
+              </form>
+              
+              <script>
+                function goToPage() {
+                  var selectedPage = document.getElementById('myDropdown').value;
+                  if(selectedPage) {
+                    window.location.href = selectedPage;
+                  }
+                }
+              </script>
+        </div>
+</body>
+</html>
